@@ -64,6 +64,10 @@
             width: 100%;
             height: auto;
           }
+          .list-group-item a{
+            color: darkblue;
+            font-weight: bold;
+          }
         </style>
 
 </head>
@@ -83,6 +87,7 @@
         <ul>
           <li><a href="index.php">Home</a></li>
           <li><a href="about.php">About</a></li>
+          <li><a href="#updates">News/Blog</a></li>
           <li><a href="Gallery.php">Gallery</a></li>
           <li><a href="contact.php">Contact Us</a></li>
         </ul>
@@ -95,9 +100,9 @@
   </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero" class="hero d-flex align-items-center section-bg otherrr" style="background-image: linear-gradient(rgba(0, 0, 0, 0.2),rgba(1, 6, 7, 0.446)),url(./assets/img/secondflyer.png);">
-      <div class="row">
-        <div class="col-md-6" style="background-color: black; color: white !important; opacity: 0.9;">
+  <section id="hero" class="hero d-flex align-items-center section-bg otherrr" style="background-image: linear-gradient(rgba(0, 0, 0, 0.2),rgba(1, 6, 7, 0.446)),url(./assets/img/secondflyer.png); padding: 0px !important;">
+      <div class="row" style="width: 100%;">
+        <div class="col-md-5" style="background-color: black; color: white !important; opacity: 0.9;">
           <div id="postCarousel" class="carousel slide" data-ride="carousel">
               <div class="carousel-inner">
               <?php
@@ -116,7 +121,7 @@
                           $title = $item->title;
                           $link = $item->link;
                           $description = strip_tags($item->description); // Remove HTML tags
-                          $excerpt = substr($description, 0, 200) . '...'; // First 200 chars for excerpt
+                          $excerpt = substr($description, 0, 100) . '...'; // First 200 chars for excerpt
 
                           // Extract image URL from the description content
                           preg_match('/<img.+src=[\'"](?P<src>.+?)[\'"].*>/i', $item->description, $image_match);
@@ -167,24 +172,28 @@
           </div>
           <button style="border: none;
               background-color: red;
-              color: white !important;
-              width: 180px;
-              border-radius:20%;
+              color: white !important;             
+              border-radius:100%;
               height: 7vh;
-            " class="oth-fonts"><a href="register.php" style="color: white;"></a>Watch Live Here</a></button>
+              padding: 10px;
+              float: right;
+            " class="oth-fonts"><a href="register.php" style="color: white;"></a>Click Here to Watch the Program Live</a></button>
 
         </div>
       </div>
     </div>
   </section><!-- End Hero Section -->
 
-  <section style="background-color:black;">
-    <div class="container" style=" opacity:0.5;">
+  <section id="updates" style="background-color:black;">
+    <div class="container">
       <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-8" style="color: white;">
           <h1>13TH Annual Change We Need Programme</h1>
-          <h2>Prayers for Nigeria and Her Leaders</h2>
+          <h2 style="color: yellow;">Prayers for Nigeria and Her Leaders</h2>
+          <hr>
           <p>The Change We Need (TCWN) Programme has consistently served as a platform for reflection, dialogue, and prayer for Nigeria, particularly during its annual Independence event at the National Christian Centre. Over the years, TCWN has brought together political leaders, senior public officials, Christian leaders, representatives from development organizations, the media, and academia to deliberate on critical issues affecting Nigeria’s development and to lift the nation and her leaders in prayer. The program has been institutionalized, becoming a vital occasion for inspiring collective action towards national transformation and unity. Through these dialogues, key themes have emerged, addressing the country’s most pressing challenges while seeking divine guidance for solutions.</p>
+          <p>This year, the 13th Edition is themed: <b>Prayers for Nigeria and Her Leaders</b>. Links and updates of this event will be pusblished soon on this platform</p>
+        <hr>
         </div>
         <div class="col-md-4">
           <?php
@@ -195,13 +204,14 @@
               $rss = simplexml_load_file($rss_url, 'SimpleXMLElement', LIBXML_NOCDATA);
 
               if ($rss) {
-                  echo '<ul class="latest-posts">';
+                  echo '<ul class="list-group">';
+                  echo '<li class="list-group-item active">Latest Updates</>';
                   foreach ($rss->channel->item as $item) {
                       $title = $item->title;
                       $link = $item->link;
 
                       // Display each post as a list item
-                      echo '<li><a href="view_post.php?url=' . urlencode($link) . '">' . $title . '</a></li>';
+                      echo '<li class="list-group-item"><a href="view_post.php?url=' . urlencode($link) . '">' . $title . '</a></li>';
                   }
                   echo '</ul>';
               } else {
@@ -276,7 +286,7 @@
         <div class="row gy-4">
           <div class="col-lg-7 position-relative about-img p-well-p"  data-aos="fade-up" data-aos-delay="150">
            <div class="position-relative mt-4">
-                <img src="assets/img/cwn2023.jpg" class="img-fluid" alt="">
+                <img src="assets/img/2024slide2.jpg" class="img-fluid" alt="">
               </div>  
           <!-- <div class="call-us position-absolute">
               <h4>Book a Table</h4>
@@ -287,9 +297,9 @@
           <div class="col-lg-5 d-flex align-items-center" data-aos="fade-up" data-aos-delay="300">
             <div class="content ps-0 ps-lg-6">
              
-              <h4>12TH THE CHANGE WE NEED NIGERIA INITIATIVE (TCWNNI) ANNUAL FORUM, 2023.</h4>
+              <h4>13TH THE CHANGE WE NEED NIGERIA INITIATIVE (TCWNNI) ANNUAL FORUM, 2024.</h4>
               <p>
-              We would be delighted to have you participate in the TCWNNIPrayer forNigeria on <blockquote>October 15, 2023</blockquote> at theCharismatic Renewal Ministries, Grace Sanctuary Gwagwalada, Abuja  at <i>10am to 1pm.</i> <br>
+              We would be delighted to have you participate in the TCWNNI Prayer for Nigeria on <blockquote>October 13, 2024</blockquote> at theCharismatic Renewal Ministries, Grace Sanctuary Gwagwalada, Abuja  at <i>10am to 1pm.</i> <br>
               This is planned to be a hybrid (onsite & online) event.
 
               To participate online or onsite,<br> please register here to receive further updates. 
