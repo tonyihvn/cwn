@@ -106,58 +106,76 @@
           <div id="postCarousel" class="carousel slide" data-ride="carousel">
               <div class="carousel-inner">
               <?php
-                  ini_set('allow_url_fopen', '1');
+                  // Function to fetch content using cURL
+                  function fetchWithCurl($url) {
+                      $ch = curl_init();
+                      curl_setopt($ch, CURLOPT_URL, $url);
+                      curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+                      curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+                      curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); // For HTTPS
+                      $response = curl_exec($ch);
+                      curl_close($ch);
+                      return $response;
+                  }
+
                   // URL of the WordPress site's RSS feed
                   $rss_url = 'https://changenigeriainitiative.org.ng/blog/feed/';
 
-                  // Load the RSS feed
-                  $rss = simplexml_load_file($rss_url, 'SimpleXMLElement', LIBXML_NOCDATA);
+                  // Fetch the RSS feed content using cURL
+                  $rss_content = fetchWithCurl($rss_url);
 
-                  if ($rss) {
-                      echo '<div id="postCarousel" class="carousel slide" data-ride="carousel">';
-                      echo '<div class="carousel-inner">';
+                  if ($rss_content) {
+                      $rss = simplexml_load_string($rss_content, 'SimpleXMLElement', LIBXML_NOCDATA);
 
-                      $i = 0;
-                      foreach ($rss->channel->item as $item) {
-                          $title = $item->title;
-                          $link = $item->link;
-                          $description = strip_tags($item->description); // Remove HTML tags
-                          $excerpt = substr($description, 0, 100) . '...'; // First 200 chars for excerpt
+                      if ($rss) {
+                          echo '<div id="postCarousel" class="carousel slide" data-ride="carousel">';
+                          echo '<div class="carousel-inner">';
 
-                          // Extract image URL from the description content
-                          preg_match('/<img.+src=[\'"](?P<src>.+?)[\'"].*>/i', $item->description, $image_match);
-                          $image_url = $image_match['src'] ?? 'https://via.placeholder.com/800x500.png?text=No+Image';
+                          $i = 0;
+                          foreach ($rss->channel->item as $item) {
+                              $title = $item->title;
+                              $link = $item->link;
+                              $description = strip_tags($item->description); // Remove HTML tags
+                              $excerpt = substr($description, 0, 200) . '...'; // First 200 chars for excerpt
 
-                          // Add "active" class to the first carousel item
-                          $active_class = ($i === 0) ? 'active' : '';
+                              // Extract image URL from the description content
+                              preg_match('/<img.+src=[\'"](?P<src>.+?)[\'"].*>/i', $item->description, $image_match);
+                              $image_url = $image_match['src'] ?? 'https://via.placeholder.com/800x500.png?text=No+Image';
 
-                          // Display carousel item
-                          echo '<div class="carousel-item ' . $active_class . '">';
-                          echo '<img class="d-block w-100" src="' . $image_url . '" alt="' . $title . '">';
-                          echo '<div class="carousel-caption">';
-                          echo '<h5>' . $title . '</h5>';
-                          echo '<p>' . $excerpt . '</p>';
-                          echo '<a href="view_post.php?url=' . urlencode($link) . '" class="btn btn-primary">Read More</a>';
+                              // Add "active" class to the first carousel item
+                              $active_class = ($i === 0) ? 'active' : '';
+
+                              // Display carousel item
+                              echo '<div class="carousel-item ' . $active_class . '">';
+                              echo '<img class="d-block w-100" src="' . $image_url . '" alt="' . $title . '">';
+                              echo '<div class="carousel-caption">';
+                              echo '<h5>' . $title . '</h5>';
+                              echo '<p>' . $excerpt . '</p>';
+                              echo '<a href="view_post.php?url=' . urlencode($link) . '" class="btn btn-primary">Read More</a>';
+                              echo '</div>';
+                              echo '</div>';
+
+                              $i++; // Increment for the next item
+                          }
+
                           echo '</div>';
+                          echo '<a class="carousel-control-prev" href="#postCarousel" role="button" data-slide="prev">';
+                          echo '<span class="carousel-control-prev-icon" aria-hidden="true"></span>';
+                          echo '<span class="sr-only">Previous</span>';
+                          echo '</a>';
+                          echo '<a class="carousel-control-next" href="#postCarousel" role="button" data-slide="next">';
+                          echo '<span class="carousel-control-next-icon" aria-hidden="true"></span>';
+                          echo '<span class="sr-only">Next</span>';
+                          echo '</a>';
                           echo '</div>';
-
-                          $i++; // Increment for the next item
+                      } else {
+                          echo 'Unable to parse the RSS feed.';
                       }
-
-                      echo '</div>';
-                      echo '<a class="carousel-control-prev" href="#postCarousel" role="button" data-slide="prev">';
-                      echo '<span class="carousel-control-prev-icon" aria-hidden="true"></span>';
-                      echo '<span class="sr-only">Previous</span>';
-                      echo '</a>';
-                      echo '<a class="carousel-control-next" href="#postCarousel" role="button" data-slide="next">';
-                      echo '<span class="carousel-control-next-icon" aria-hidden="true"></span>';
-                      echo '<span class="sr-only">Next</span>';
-                      echo '</a>';
-                      echo '</div>';
                   } else {
                       echo 'Unable to fetch the RSS feed.';
                   }
-              ?>
+               ?>
+
 
               </div>
 
@@ -197,31 +215,46 @@
         <hr>
         </div>
         <div class="col-md-4">
-          <?php
-              // URL of the WordPress site's RSS feed
-              // $rss_url = 'https://changenigeriainitiative.org.ng/blog/feed/';
-              $rss_url = 'https://changenigeriainitiative.org.ng/blog/feed/';
+        <?php
+            // Function to fetch content using cURL
+            function fetchWithCurl($url) {
+                $ch = curl_init();
+                curl_setopt($ch, CURLOPT_URL, $url);
+                curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+                curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+                curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); // For HTTPS
+                $response = curl_exec($ch);
+                curl_close($ch);
+                return $response;
+            }
 
+            // URL of the WordPress site's RSS feed
+            $rss_url = 'https://changenigeriainitiative.org.ng/blog/feed/';
 
-              // Load the RSS feed
-              // $rss = simplexml_load_file($rss_url, 'SimpleXMLElement', LIBXML_NOCDATA);
-              
-              $rss = json_decode(file_get_contents($rss_url));
-              if ($rss) {
-                  echo '<ul class="list-group">';
-                  echo '<li class="list-group-item active">Latest Updates</>';
-                  foreach ($rss->channel->item as $item) {
-                      $title = $item->title;
-                      $link = $item->link;
+            // Fetch the RSS feed content using cURL
+            $rss_content = fetchWithCurl($rss_url);
 
-                      // Display each post as a list item
-                      echo '<li class="list-group-item"><a href="view_post.php?url=' . urlencode($link) . '">' . $title . '</a></li>';
-                  }
-                  echo '</ul>';
-              } else {
-                  echo 'Unable to fetch the RSS feed.';
-              }
-          ?>
+            if ($rss_content) {
+                $rss = simplexml_load_string($rss_content, 'SimpleXMLElement', LIBXML_NOCDATA);
+
+                if ($rss) {
+                    echo '<ul class="latest-posts">';
+                    foreach ($rss->channel->item as $item) {
+                        $title = $item->title;
+                        $link = $item->link;
+
+                        // Display each post as a list item
+                        echo '<li><a href="view_post.php?url=' . urlencode($link) . '">' . $title . '</a></li>';
+                    }
+                    echo '</ul>';
+                } else {
+                    echo 'Unable to parse the RSS feed.';
+                }
+            } else {
+                echo 'Unable to fetch the RSS feed.';
+            }
+         ?>
+
 
         </div>
       </div>
