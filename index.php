@@ -51,6 +51,7 @@
 
               #hero{
                 background-image: none !important;
+                background-color: black;
               }
 
               .carousel-caption h5, .carousel-caption p{
