@@ -48,6 +48,15 @@
               .logo {
                   width: 100%; /* Occupy 70% of the width on screens 768px wide or smaller */
               }
+
+              #hero{
+                background-image: none !important;
+              }
+
+              .carousel-caption h5, .carousel-caption p{
+                display: none;
+                visibility: hidden; 
+              }
           }
 
           .carousel-caption {
