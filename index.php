@@ -302,7 +302,7 @@
             
 
               <div class="position-relative mt-4">
-                <img src="assets/img/cwn2023.jpg" class="img-fluid" alt="">
+                <img src="assets/img/2024slide2.jpg" class="img-fluid" alt="">
                 <a href="https://youtu.be/eIXu9ZM1U1o" class="glightbox play-btn"></a>
               </div>
             </div>
