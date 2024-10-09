@@ -106,6 +106,7 @@
           <div id="postCarousel" class="carousel slide" data-ride="carousel">
               <div class="carousel-inner">
               <?php
+                  ini_set('allow_url_fopen', '1');
                   // URL of the WordPress site's RSS feed
                   $rss_url = 'https://changenigeriainitiative.org.ng/blog/feed/';
 
