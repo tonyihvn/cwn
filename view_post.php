@@ -83,7 +83,7 @@
                 // REST API URL for retrieving the post content based on the post slug
                 $parsed_url = parse_url($post_url);
                 $slug = basename($parsed_url['path']);
-                $api_url = 'https://changenigeriainitiative.org.ng/wp-json/wp/v2/posts?slug=' . $slug;
+                $api_url = 'https://changenigeriainitiative.org.ng/blog/wp-json/wp/v2/posts?slug=' . $slug;
 
                 // Fetch post data using cURL
                 $post_data_json = fetchWithCurl($api_url);
@@ -98,7 +98,7 @@
                     // Fetch the featured image using another API call if it exists
                     $featured_image_url = '';
                     if ($featured_image_id) {
-                        $image_data_json = fetchWithCurl('https://changenigeriainitiative.org.ng/wp-json/wp/v2/media/' . $featured_image_id);
+                        $image_data_json = fetchWithCurl('https://changenigeriainitiative.org.ng/blog/wp-json/wp/v2/media/' . $featured_image_id);
                         $image_data = json_decode($image_data_json, true);
                         if (isset($image_data['source_url'])) {
                             $featured_image_url = $image_data['source_url'];

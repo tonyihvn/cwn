@@ -236,13 +236,15 @@
                 $rss = simplexml_load_string($rss_content, 'SimpleXMLElement', LIBXML_NOCDATA);
 
                 if ($rss) {
-                    echo '<ul class="latest-posts">';
+                    echo '<ul class="list-group">';
+                    echo '<li class="list-group-item active">Lastest Updates</li>';
+                  
                     foreach ($rss->channel->item as $item) {
                         $title = $item->title;
                         $link = $item->link;
 
                         // Display each post as a list item
-                        echo '<li><a href="view_post.php?url=' . urlencode($link) . '">' . $title . '</a></li>';
+                        echo '<li class="list-group-item"><a href="view_post.php?url=' . urlencode($link) . '">' . $title . '</a></li>';
                     }
                     echo '</ul>';
                 } else {
