@@ -54,7 +54,7 @@
                 background-color: black;
               }
 
-              .carousel-caption h5, .carousel-caption p{
+              .carousel-caption p{
                 display: none;
                 visibility: hidden; 
               }
