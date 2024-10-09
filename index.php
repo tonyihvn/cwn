@@ -198,7 +198,9 @@
         <div class="col-md-4">
           <?php
               // URL of the WordPress site's RSS feed
-              $rss_url = 'https://changenigeriainitiative.org.ng/blog/feed/';
+              // $rss_url = 'https://changenigeriainitiative.org.ng/blog/feed/';
+              $rss_url = '/blog/feed/';
+
 
               // Load the RSS feed
               $rss = simplexml_load_file($rss_url, 'SimpleXMLElement', LIBXML_NOCDATA);
