@@ -65,6 +65,10 @@
               padding: 10px;
           }
 
+          .carousel-caption p{
+            color: white;
+          }
+
           .carousel-item img {
               width: 100%;
               height: auto;
@@ -138,15 +142,15 @@
                       $rss = simplexml_load_string($rss_content, 'SimpleXMLElement', LIBXML_NOCDATA);
 
                       if ($rss) {
-                          echo '<div id="postCarousel" class="carousel slide" data-ride="carousel">';
-                          echo '<div class="carousel-inner">';
+                          // echo '<div id="postCarousel" class="carousel slide" data-ride="carousel">';
+                          // echo '<div class="carousel-inner">';
 
                           $i = 0;
                           foreach ($rss->channel->item as $item) {
                               $title = $item->title;
                               $link = $item->link;
                               $description = strip_tags($item->description); // Remove HTML tags
-                              $excerpt = substr($description, 0, 200) . '...'; // First 200 chars for excerpt
+                              $excerpt = substr($description, 0, 100) . '...'; // First 200 chars for excerpt
 
                               // Extract image URL from the description content
                               preg_match('/<img.+src=[\'"](?P<src>.+?)[\'"].*>/i', $item->description, $image_match);
@@ -168,16 +172,6 @@
                               $i++; // Increment for the next item
                           }
 
-                          echo '</div>';
-                          echo '<a class="carousel-control-prev" href="#postCarousel" role="button" data-slide="prev">';
-                          echo '<span class="carousel-control-prev-icon" aria-hidden="true"></span>';
-                          echo '<span class="sr-only">Previous</span>';
-                          echo '</a>';
-                          echo '<a class="carousel-control-next" href="#postCarousel" role="button" data-slide="next">';
-                          echo '<span class="carousel-control-next-icon" aria-hidden="true"></span>';
-                          echo '<span class="sr-only">Next</span>';
-                          echo '</a>';
-                          echo '</div>';
                       } else {
                           echo 'Unable to parse the RSS feed.';
                       }
@@ -516,7 +510,7 @@
                     </div>
                   </div>
                   <div class="col-lg-2 text-center">
-                    <img src="assets/img/testimonials/testimonials-1.jpg" class="img-fluid testimonial-img" alt="">
+                    <img src="assets/img/lor.jpg" class="img-fluid testimonial-img" alt="">
                   </div>
                 </div>
               </div>
@@ -654,8 +648,16 @@
 
   <div id="preloader"></div>
 
+  <!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Popper.js (for Bootstrap tooltips/popovers) -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+<!-- Bootstrap JavaScript -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script> -->
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
