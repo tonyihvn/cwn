@@ -52,6 +52,7 @@
               #hero{
                 background-image: none !important;
                 background-color: black;
+                min-height: 10vh;
               }
 
               .carousel-caption p{
