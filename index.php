@@ -88,6 +88,8 @@
 </head>
 
 <body>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v21.0&appId=213102155499064"></script>
 
   <!-- ======= Header ======= -->
   <header id="header" class="header fixed-top d-flex align-items-center" style="clear: both; position: relative; margin-bottom: 5px;">
@@ -216,11 +218,10 @@
           <h2 style="color: yellow;">Prayers for Nigeria and Her Leaders</h2>
           <hr>
           <p>The Change We Need (TCWN) Programme has consistently served as a platform for reflection, dialogue, and prayer for Nigeria, particularly during its annual Independence event at the National Christian Centre. Over the years, TCWN has brought together political leaders, senior public officials, Christian leaders, representatives from development organizations, the media, and academia to deliberate on critical issues affecting Nigeria’s development and to lift the nation and her leaders in prayer. The program has been institutionalized, becoming a vital occasion for inspiring collective action towards national transformation and unity. Through these dialogues, key themes have emerged, addressing the country’s most pressing challenges while seeking divine guidance for solutions.</p>
-          <p>This year, the 13th Edition is themed: <b>Prayers for Nigeria and Her Leaders</b>. Links and updates of this event will be pusblished soon on this platform</p>
-        <hr>
+          <p>This year, the 13th Edition is themed: <b>Prayers for Nigeria and Her Leaders</b>. Links and updates of this event will be pusblished soon on this platform</p>        
         </div>
         <div class="col-md-4">
-        <?php
+          <?php
             // URL of the WordPress site's RSS feed
             $rss_url = 'https://changenigeriainitiative.org.ng/blog/feed/';
 
@@ -245,14 +246,31 @@
                 } else {
                     echo 'Unable to parse the RSS feed.';
                 }
-            } else {
-                echo 'Unable to fetch the RSS feed.';
-            }
-         ?>
-
+              } else {
+                  echo 'Unable to fetch the RSS feed.';
+              }
+          ?>
 
         </div>
       </div>
+      <div class="row">        
+
+          <div class="col-md-3">
+            <h3>On Twitter (X)</h3>
+            <a class="twitter-timeline" href="https://twitter.com/The_cwnni?ref_src=twsrc%5Etfw">Tweets by The_cwnni</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          </div>
+
+          <div class="col-md-4">
+            <h3>Videos on Youtube</h3>
+            <iframe width="1212" height="682" src="https://www.youtube.com/embed/9sKPOAILXzM" title="The change we need." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+          <div class="col-md-5">
+            <h3>Follow Us on Facebook</h3>
+            <div class="fb-page" data-href="https://web.facebook.com/thechangeweneednigeria" style="width: 100%; height: 500px; border-radius: 20px;" data-tabs="timeline" data-width="500" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://web.facebook.com/thechangeweneednigeria" class="fb-xfbml-parse-ignore"><a href="https://web.facebook.com/thechangeweneednigeria">The Change We Need Nigeria.</a></blockquote></div>
+          </div>
+          
+        </div>
     </div>
   </section>
 
