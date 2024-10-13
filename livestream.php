@@ -39,7 +39,7 @@
 
       <a href="index.php" class="logo d-flex align-items-center me-auto me-lg-0">
         <img src="assets/img/log.png" alt="Logo">
-        <h1>TCWNNII<span>.</span></h1>
+        <h1>THE CHANGE WE NEED <br> <span style="color: green">NIGERIA</span> INITIATIVE<span>.</span></h1>
       </a>
 
       <nav id="navbar" class="navbar">
@@ -65,9 +65,11 @@
     <div class="container" data-aos="fade-up">
 
       <div class="section-header">
-        <h2>The Change we need Nigeria Initiative Watch Along</h2>
-        <p>Livestream</span></p>
+        <h2>Theme: Prayer for Nigeria and Her Leaders | 13th October 2024</h2>
+        <hr>
+        <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fweb.facebook.com%2Fthechangeweneednigeria%2Fvideos%2F852953480335488%2F&show_text=false&width=560&t=0" width="80%" height="800" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
       </div>
+
    
 
  

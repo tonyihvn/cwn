@@ -203,7 +203,7 @@
               height: 7vh;
               padding: 10px;
               float: right;
-            " class="oth-fonts"><a href="register.php" style="color: white;"></a>Click Here to Watch the Program Live</a></button>
+            " class="oth-fonts"><a href="livestream.php" style="color: white;">Watch Live Now!</a></button>
 
         </div>
       </div>
