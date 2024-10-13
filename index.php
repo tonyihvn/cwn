@@ -647,10 +647,9 @@
         <div class="col-lg-3 col-md-6 footer-links">
           <h4>Follow Us</h4>
           <div class="social-links d-flex">
-            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+            <a href="https://twitter.com/The_cwnni" target="_blank" class="twitter"><i class="bi bi-twitter"></i></a>
+            <a href="https://web.facebook.com/thechangeweneednigeria" target="_blank" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/thechangeweneednigeria?igsh=NGVhN2U2NjQ0Yg==" target="_blank" class="instagram"><i class="bi bi-instagram"></i></a>
           </div>
         </div>
 
