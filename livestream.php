@@ -34,6 +34,10 @@
         width: 100% !important;
       }
     }
+
+    ifrane{
+      margin-bottom: 0px;
+    }
   </style>
 
 
@@ -76,12 +80,32 @@
         <hr>
         <h2 style="color: darkgreen; font-weight: bold;">Theme: Prayer for Nigeria and Her Leaders | 13th October 2024</h2>
         <hr>
-        <iframe id="livestream" src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fweb.facebook.com%2Fthechangeweneednigeria%2Fvideos%2F852953480335488%2F&show_text=false&width=560&t=0" width="80%" height="800" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+        <iframe id="livestream" src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fweb.facebook.com%2Fthechangeweneednigeria%2Fvideos%2F852953480335488%2F&show_text=false&width=560&t=0" width="80%" height="auto" style="border:none;overflow:visible" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+          
+      <h3 style="margin-top: 0px">DISCUSSION FORUM</h3>
+      <h6>Feel free to share your opinions on the issues discussed here in appropriate way. <br>Note: You need an account e.g. Facebook, Twitter, Google, etc</h6>
+        
+      <div id="disqus_thread"></div>
+      <script>
+          /**
+          *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+          *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+          /*
+          var disqus_config = function () {
+          this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+          this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+          };
+          */
+          (function() { // DON'T EDIT BELOW THIS LINE
+          var d = document, s = d.createElement('script');
+          s.src = 'https://thechangeweneed.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+          })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
       </div>
-
-   
-
- 
         
 
   </section><!-- End Menu Section -->

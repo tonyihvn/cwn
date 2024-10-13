@@ -257,12 +257,12 @@
 
           <div class="col-md-3">
             <h3>On Twitter (X)</h3>
-            <a class="twitter-timeline" href="https://twitter.com/The_cwnni?ref_src=twsrc%5Etfw">Tweets by The_cwnni</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Meet our Panelist. Pst. Adelakun Adebowale Joseph <a href="https://twitter.com/hashtag/ChangeWeNeed?src=hash&amp;ref_src=twsrc%5Etfw">#ChangeWeNeed</a> <a href="https://twitter.com/hashtag/changeweneednigeria2024?src=hash&amp;ref_src=twsrc%5Etfw">#changeweneednigeria2024</a> <a href="https://twitter.com/hashtag/tcwnni2024?src=hash&amp;ref_src=twsrc%5Etfw">#tcwnni2024</a> <a href="https://twitter.com/hashtag/paneldiscussion?src=hash&amp;ref_src=twsrc%5Etfw">#paneldiscussion</a> <a href="https://twitter.com/hashtag/thechangeweneednigeria2024?src=hash&amp;ref_src=twsrc%5Etfw">#thechangeweneednigeria2024</a> <a href="https://t.co/Uc87MYg1Ka">pic.twitter.com/Uc87MYg1Ka</a></p>&mdash; The Change We Need Nigeria Initiative (TCWNNI) (@The_cwnni) <a href="https://twitter.com/The_cwnni/status/1845405788979986676?ref_src=twsrc%5Etfw">October 13, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
           </div>
 
           <div class="col-md-4">
             <h3>Videos on Youtube</h3>
-            <iframe width="1212" height="682" src="https://www.youtube.com/embed/9sKPOAILXzM" title="The change we need." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/9sKPOAILXzM" title="The change we need." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen  style="width: 100%; height: 500px; border-radius: 20px;"></iframe>
             </div>
 
           <div class="col-md-5">
