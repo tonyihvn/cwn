@@ -73,6 +73,7 @@
     <div class="container" data-aos="fade-up">
 
       <div class="section-header">
+        <hr>
         <h2 style="color: darkgreen; font-weight: bold;">Theme: Prayer for Nigeria and Her Leaders | 13th October 2024</h2>
         <hr>
         <iframe id="livestream" src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fweb.facebook.com%2Fthechangeweneednigeria%2Fvideos%2F852953480335488%2F&show_text=false&width=560&t=0" width="80%" height="800" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
